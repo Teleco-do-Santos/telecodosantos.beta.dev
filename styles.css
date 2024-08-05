@@ -1,0 +1,259 @@
+/* CSS */
+
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Circular Std', sans-serif; /* Cambia la fuente a Circular Std */
+  background-color: #212121; /* Dark background */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Cambia a flex-start para que el contenido no esté centrado verticalmente */
+  min-height: 100vh; /* Asegura que el contenido ocupe toda la altura */
+  overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+/* Header Styles */
+
+header {
+  background-color: #333;
+  padding: 1em;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ancho del header */
+  margin: 0 auto; /* Centrar el header */
+  border-bottom: 1px solid #444; /* Agrega un borde inferior */
+  position: fixed; /* Fija la barra de navegación */
+  top: 0; /* Posición superior */
+  left: 0; /* Posición izquierda */
+  right: 0; /* Posición derecha */
+  z-index: 10; /* Eleva la barra de navegación */
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav li {
+  margin-right: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: #ccc;
+}
+
+/* Hero Styles */
+
+.contenedor-principal {
+  background-image: url('index2.jpg');
+  background-size: cover; /* Cambia a cover para que la imagen cubra todo el contenedor */
+  background-position: center;
+  height: 100vh; /* Ajusta la altura */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Para el contenido absoluto */
+  width: 100vw;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta la posición para centrar */
+  text-align: center;
+  z-index: 2; /* Asegura que el contenido esté por encima de la imagen */
+  padding: 20px; /* Añade un poco de padding */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.hero-content h1 {
+  font-size: 48px; /* Tamaño de letra del título */
+  margin-bottom: 0.5em; /* Espacio inferior */
+}
+
+.hero-content p {
+  font-size: 24px; /* Tamaño de letra del párrafo */
+  margin-bottom: 1em; /* Espacio inferior */
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #4285f4; /* Color azul de Google */
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin: 0 10px; /* Espacio entre botones */
+  border-radius: 24px; /* Borde redondeado */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.btn:hover {
+  background-color: #357ae8; /* Color más oscuro al pasar el cursor */
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.additional-content {
+  display: flex;
+  flex-direction: column; /* Cambia a columna para apilar las secciones */
+  align-items: center;
+  margin-top: 20px; /* Espacio superior para separar de .hero-content */
+}
+
+.left-content, .right-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%; /* Ancho de la sección */
+  margin: 10px 0; /* Espacio entre las filas */
+}
+
+.side-image {
+  width: 40%; /* Ajusta el ancho de las imágenes laterales */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 10px; /* Bordes redondeados opcionales */
+}
+
+.left-content p, .right-content p {
+  width: 50%; /* Ajusta el ancho del texto */
+  margin: 0 20px; /* Espacio entre la imagen y el texto */
+  font-size: 18px; /* Tamaño del texto */
+  color: #fff; /* Color del texto */
+  text-align: left; /* Alineación del texto */
+}
+
+/* Blog Styles */
+
+/* Blog Styles */
+
+/* Blog Styles */
+
+.blog {
+  display: flex;
+  flex-direction: column; /* Mantiene la estructura vertical para el título */
+  align-items: center;
+  padding: 2em;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.blog-posts {
+  display: flex;
+  justify-content: space-around; /* Espacio igual entre los elementos */
+  align-items: flex-start; /* Alinea los elementos al inicio */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples filas si es necesario */
+}
+
+.blog-post {
+  flex: 1; /* Permite que cada blog ocupe el mismo espacio */
+  margin: 20px; /* Espacio entre los blogs */
+  max-width: 300px; /* Establece un ancho máximo para los blogs */
+  background-color: #444;
+  padding: 20px;
+  border-radius: 19px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: inherit; /* Mantiene el color del texto heredado */
+}
+
+.blog-post h3 {
+  margin-top: 0;
+}
+
+.blog-post img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.leer-mas {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.leer-mas:hover {
+  background-color: #444;
+}
+
+/* Footer Styles */
+
+footer {
+  background-color: #333;
+  padding: 1em;
+  text-align: center;
+  color: #fff;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .blog-post {
+      flex-basis: 80%; /* Aumenta el tamaño en pantallas pequeñas */
+      margin: 10px 0; /* Espacio vertical */
+  }
+
+  .hero-content h1 {
+      font-size: 36px; /* Ajusta el tamaño del título en pantallas pequeñas */
+  }
+
+  .hero-content p {
+      font-size: 18px; /* Ajusta el tamaño del párrafo en pantallas pequeñas */
+  }
+}
+
