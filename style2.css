@@ -1,260 +1,153 @@
-/* CSS */
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+}
 
-/* Global Styles */
+/* Estilos del encabezado */
+.header {
+  background-color: #1e1e1e;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.header-title {
+  color: #fff;
+  margin: 0;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.nav-item {
+  display: inline;
+  margin: 0 10px;
+}
+
+.nav-link {
+  color: #4285f4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #3367d6;
+}
+
+/* Estilos de las publicaciones */
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.post {
+  width: 300px;
+  margin: 20px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.post-header {
+  height: 200px;
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.post-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 20px;
+}
+
+.post-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.post-excerpt {
+  font-size: 14px;
+  color: #b0b0b0;
+  margin-bottom: 20px;
+}
+
+.read-more {
+  display: inline-block;
+  background-color: #4285f4;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #3367d6;
+}
+
+/* Estilos de la paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.page-link {
+  display: inline-block;
+  background-color: #4285f4;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin: 0 5px;
+}
+
+.page-link:hover {
+  background-color: #3367d6;
+}
+
+.page-link.disabled {
+  background-color: #666;
+  pointer-events: none;
+}
+
+/* Estilos del pie de página */
+.footer {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .post {
+      width: 100%;
+      margin: 20px 0;
   }
-  body {
-    font-family: 'Circular Std', sans-serif; /* Cambia la fuente a Circular Std */
-    
-    background-color: #212121; /* Dark background */
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 120vh;
-    margin: 0;
-    overflow-x: hidden; /* Evita el scroll horizontal */
-  }
-  
-  /* Header Styles */
-  
-  header {
-    background-color: #333;
-    padding: 1em;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ancho del header */
-    margin: 0 auto; /* Centrar el header */
-    border-bottom: 1px solid #444; /* Agrega un borde inferior */
-    position: fixed; /* Fija la barra de navegación */
-    top: 0; /* Posición superior */
-    left: 0; /* Posición izquierda */
-    right: 0; /* Posición derecha */
-    z-index: 10; /* Eleva la barra de navegación */
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0em;
-  }
-  
-  .nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .nav li {
-    margin-right: 20px;
-  }
-  
-  .nav a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.2s ease;
-  }
-  
-  .nav a:hover {
-    color: #ccc;
-  }
-  
-  .nav-toggle {
-    display: none;
-  }
-  
-  /* Hero Styles */
-  
-  .contenedor-principal {
-    background-image: url('index.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Ajusta la altura según sea necesario */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  .hero {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0em;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .hero-content {
-    flex-basis: 55%;
-    margin: 25px;
-  }
-  
-  .hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  
-  .hero-content {
-    position: absolute;
-    top: 59%;
-    left: 50%;
-    transform: translate(-50%, 20%);
-    text-align: center;
-    z-index: 2;
-  }
-  
-  .hero-content h1 {
-    font-size: 36px; /* Tamaño de letra del título */
-  }
-  
-  .hero-content p {
-    font-size: 24px; /* Tamaño de letra del párrafo */
-  }
-  
-  .buttons {
-    display: flex; /* Hace que los botones se alineen horizontalmente */
-    justify-content: center; /* Centra los botones horizontalmente */
-    margin-top: 10px; /* Agrega un margen superior de 25px para separar los botones del hero-content */
-  }
-  
-  .btn {
-    background-color: #444; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
-    border: none; /* No hay borde en el botón */
-    padding: 10px 20px; /* Agrega un padding de 10px en la parte superior e inferior, y 20px en la parte izquierda y derecha */
-    font-size: 12px; /* Tamaño de la fuente del texto del botón */
-    cursor: pointer; /* Cambia el cursor a una mano para indicar que es un botón */
-    transition: background-color 0.2s ease; /* Agrega una transición suave al cambiar el color de fondo del botón */
-    margin-right: 90px; /* Agrega un margen derecho de 10px para separar los botones */
-    margin-left: 80px; /* Agrega un margen derecho de 10px para separar los botones */
-  }
-  
-  .github {
-    background-color: #333; /* Color de fondo del botón de GitHub */
-    color: #fff; /* Color del texto del botón de GitHub */
-    border: 1px solid #444; /* Borde del botón de GitHub */
-  }
-  
-  .quienes-somos {
-    background-color: #444; /* Color de fondo del botón de "Quienes somos" */
-    color: #fff; /* Color del texto del botón de "Quienes somos" */
-    border: 1px solid #555; /* Borde del botón de "Quienes somos" */
-  }
-  
-  .seccion-1,.seccion-2,.seccion-3,.seccion-4 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-  }
-  
-  .imagen-izquierda,.imagen-derecha {
-    width: 40%; /* Ancho de la imagen */
-    margin: 20px;
-  }
-  
-  .texto-derecha,.texto-izquierda {
-    width: 50%; /* Ancho del texto */
-    margin: 5px;
-  }
-  
-  .imagen-izquierda img,.imagen-derecha img {
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-  }
-  
-  
-  /* Blog Styles */
-  
-  
-  .blog {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 2em;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .blog-posts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .blog-post {
-    flex-basis: 30%;
-    margin: 20px;
-    background-color: #444;
-    padding: 20px;
-    border-radius: 19px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .blog-post h3 {
-    margin-top: 0;
-  }
-  
-  .blog-post img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  .leer-mas {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .leer-mas:hover {
-    background-color: #444;
-  }
-  
-  /* Footer Styles */
-  
-  footer {
-    background-color: #333;
-    padding: 1em;
-    text-align: center;
-    color: #fff;
-    margin-top: 30px;
-  }
-  
-  footer p {
-    margin: 0;
-  }
-  
-  /* Responsive Design */
-  
-  @media (max-width: 768px) {
+}
